@@ -1,0 +1,31 @@
+import java.util.*;
+class rightrotation
+{
+public static void main(String args[])
+{
+	int size,i,t,k;
+	Scanner sc=new Scanner(System.in);
+	System.out.println("enter array size:");
+	size=sc.nextInt();
+	int ar[];
+	ar=new int[size];
+	System.out.println("enter array elements:");
+	for(i=0;i<size;i++)
+	{
+		ar[i]=sc.nextInt();
+	}
+	System.out.println("enter no. of rotations(k):");
+	k=sc.nextInt();
+	for(int j=0;j<k;j++)
+	{
+		t=ar[size-1];
+		for(i=size-1;i>0;i--)
+		{
+			ar[i]=ar[i-1];
+		}
+		ar[0]=t;
+	}
+	for(i=0;i<size;i++)
+	System.out.print(ar[i]+" ");
+}
+}
